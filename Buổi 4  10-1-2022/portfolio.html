@@ -5,21 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Page</title>
+    <style>
+        body{
+            /* 
+            background-color: cyan;
+            background-color: rgb(243,133,44);
+            background-color: #123D3A;
+            */
+            background-color: #123d3a;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+        #general{
+            color: yellow;
+        }
+        .video-intro{
+            width: 50%;
+
+        }
+        h2{
+            background-color: orange;
+            width: 50%;
+            border: 3px solid red;
+        }
+        img{
+            border-radius: 30px;
+            margin-left: 500px;
+            
+        }
+        h1{
+            text-align: center;
+        }
+        table , th, td{
+            border: 3px dashed white; 
+            
+            border-collapse: collapse;
+        }
+        table{
+            width: 50%;
+            /* height: 150px; */
+
+        }
+        th,td{
+            line-height: 40px;
+        }
+        td{
+            text-align: center;
+        }
+        
+
+    </style>
 </head>
+
 <body>
+    
     <h1>Pham Viet Anh's Portfolio</h1> 
     
-    <img src="./image/230018701_3013924922178366_3483876355631343681_n.jpg" width="650" alt="">
+    <img src="./image/230018701_3013924922178366_3483876355631343681_n.jpg" width="350" alt="">
     
     <h2>Intro Video</h2>
-    <video src="./video/How to Give a 60 Second Self-Introduction Presentation.mp4" controls></video>
+    <video class="video-intro" src="./video/How to Give a 60 Second Self-Introduction Presentation.mp4"  controls></video>
 
     <!-- <iframe width="1000" src="https://www.youtube.com/watch?v=8atPREotGwA" frameborder="0"></iframe> -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/8atPREotGwA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="video-intro" width="560" height="315" src="https://www.youtube.com/embed/8atPREotGwA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <audio src=""></audio>
 
-    <h2>General Information</h2>
+    <h2 id="general"">General Information</h2>
         <h3>Name:</h3>
         <p> <i>Phạm Việt Anh</i> </p>
         
@@ -94,7 +147,28 @@
     <!-- a ~ anchor tag -->
     <!-- href ~ hyperlink reference -->
     <a href="https://learn.codegym.vn/members/ubw2112r1007/">View my profile on learn.codegym.com</a>
-
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Channel</th>
+            <th>Link</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Trang Learn</td>
+            <td><a href="#">https://learn.codegym.vn/members/ubw2112r1007/</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Gmail</td>
+            <td><a href="#">longlamduc@gmail.com</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Zalo</td>
+            <td><a href="#">0968107527</a></td>
+        </tr>
+    </table>
 
 </body>
 </html>

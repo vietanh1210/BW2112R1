@@ -1,0 +1,114 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    height: 70%;
+    background-color: cadetblue ; 
+   
+    display: grid;
+    grid-template-columns:  repeat(4, 3fr);
+   
+    grid-template-rows: 2fr 1fr 1.5fr 3fr 3fr;
+    grid-template-areas: 
+    "header header header header"
+    "navigation navigation navigation navigation"
+    "tab1 tab2 tab3 tab4"
+    "main main main banner1"
+    "main main main banner2";
+    gap: 10px 10px;
+}
+.item-1{
+    background-color: chartreuse;
+    grid-area: header;
+    text-align: center;
+    
+}
+.item-2{
+    background-color: aqua;
+    text-align: center;
+    
+    grid-area: navigation;
+}
+.item-3{
+    background-color: blue;
+    
+    text-align: center;
+    grid-area: tab1 ;
+}
+.item-4{
+    
+    text-align: center;
+    background-color: brown;
+    grid-area: tab2;
+}
+.item-5{
+    
+    text-align: center;
+    background-color: lightcyan;
+    grid-area: tab3;
+}
+.item-6{
+    
+    text-align: center;
+    background-color: fuchsia;
+    grid-area: tab4;
+}
+.item-7{
+    
+    text-align: center;
+    background-color: darkslateblue;
+    grid-area: main;
+}
+.item-8{
+    
+    text-align: center;
+    background-color: gold;
+    grid-area: main;
+
+}
+.item-9{
+    
+    text-align: center;
+    background-color: lawngreen;
+    grid-area: main;
+
+}
+.item-10{
+    
+    text-align: center;
+    background-color: red;
+    grid-area: main;
+
+}
+.item-11{
+    
+    text-align: center;
+    grid-area: main;
+    background-color: indigo;
+}
+.item-12{
+    
+    text-align: center;
+    background-color: green;
+    grid-area: main;
+
+}
+.item-13{
+    
+    text-align: center;
+    background-color: lightcoral;
+    grid-area: banner1;
+}
+.item-14{
+    
+    text-align: center;
+    background-color: maroon;
+    grid-area: banner2;
+}

@@ -1,0 +1,37 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.header{
+    width: 60%;
+    background-color: darkgray;
+    height: 30%;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.header h1,h2{
+    text-align: center;
+    /* padding-top: 50px; */
+}
+.header h1{
+    padding-top: 30px;
+}
+
+.nav-header{
+    background-color: blue;
+    width: 90%;
+    height: 15%;
+    margin: auto;
+    border-radius: 5px;
+}
+.nav-header p{
+    color: aliceblue;
+    text-align: center;
+    padding-top: 5px;
+   
+}

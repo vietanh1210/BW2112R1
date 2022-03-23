@@ -1,0 +1,42 @@
+$font-family: 'Roboto', sans-serif;;
+$fontsize: 24px;
+$background-color: #f3EADA;
+$primary_dark: #4E8075;
+$nav-height: 50px;
+$container_width: 750px;
+$color-text:#696763;
+
+h1,h2,h3,h4,h5,h6{
+    font-family: $font-family;
+}
+.contactinfo{
+    ul{
+        li{
+            color: $color-text;
+            a{
+                color: $color-text;
+                font-family: $font-family;
+            }
+        }
+
+    }
+}
+.social-icons{
+    ul{
+        li{
+            a{
+                color: $color-text;
+            }
+        }
+    }
+}
+.shop-menu{
+    ul{
+        li{
+            a{
+                font-family: $font-family;
+                color: $color-text;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+const EGASmartSearchConfigs = {
+	settings: {
+		isEnabled: true,
+    // color
+		colorBg: '#ffffff',
+		colorBgHover: '#ff965e',
+		colorLabelBg: '#f7f7f7',
+		colorLabelText: '#a0a0a0',
+		colorItemBorder: '#eeeeee',
+		colorItemTextTitle: '#000000',
+		colorItemTextPrice: '#000000',
+		colorItemTextCompareAtPrice: '#a7a7a7',
+		colorItemTextSku: '#747474',
+		colorItemTextDescription: '#747474',
+		colorItemTextViewAll: '#000000',
+		colorHeaderText: '#a0a0a0',
+		colorLoading: '#000000',
+		// general
+		//searchAccuracy: 'all',
+		searchAccuracy: 'all',
+		isFixedSearch: 'absolute',
+		searchWidth: '380px',
+		searchHeight: '500px',
+		searchView:	'list',
+    
+		// product
+		productSortby: '&sortby=(sold_quantity:product=desc)',
+		displayProductDescription: false,
+		productLimit: 3,
+
+		// article
+		displayArticle: false,
+		displayArticleDescription: false,
+		articleLimit: 3
+	},
+	CONSTANT: {
+		shopDomain: '',
+		searchView: 'ega.smartsearch.json',
+		textHeaderSectionTitle: 'Kết quả tìm kiếm cho ',
+		textProductSectionTitle: 'Sản phẩm',
+		textArticleSectionTitle: 'Bài viết',
+		notFound: 'Không tìm thấy kết quả',
+		textFrom: 'Từ ',
+		textShowAll: 'Xem tất cả'
+	}
+}
+var EGASmartSearchRegister = {
+	js: [
+		"//theme.hstatic.net/200000044142/1000773248/14/ega.smartsearch.js?v=2467"
+	]
+}

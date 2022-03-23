@@ -1,0 +1,25 @@
+$text-color:#123456
+@mixin img-style($img-height) {
+    height: $img-height;
+    border-radius: 5px;
+}
+.main-post {
+    img{
+      @include img-style(40%);
+    }
+    p{
+        color: $text-color;
+    }
+}
+
+.related-post {
+    img{
+      @include img-style(100px);
+        
+    }
+    p{
+        display: inline;
+        color: aliceblue;
+    }
+}
+

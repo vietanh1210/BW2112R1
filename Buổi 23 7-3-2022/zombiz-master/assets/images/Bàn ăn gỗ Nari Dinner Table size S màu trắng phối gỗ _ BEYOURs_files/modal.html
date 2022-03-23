@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://widget.oncustomer.asia/modal.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.overlay {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  transform: scale(0.95);
+  transition: transform .3s;
+}
+
+.overlay.overlay-visible {
+  visibility: visible;
+  opacity: 1;
+  outline: none;
+  cursor: default;
+}
+
+.overlay.overlay-visible img {
+    transform: scale(1);
+}
+</style>
+</head>
+
+<body style="padding:0; margin: 0">
+  <a id="overlay-wrapper" class="overlay" onclick="hideOverlay()">
+    <img id="overlay-image" alt="Fullscreen">
+  </a>
+
+<script>
+function hideOverlay() {
+  document.getElementById('overlay-wrapper').classList.remove('overlay-visible');
+  document.getElementById('overlay-image').setAttribute('src', '');
+  window.parent.postMessage({ method: 'oc-hide-overlay-image' }, '*');
+}
+function showOverlay(url) {
+  document.getElementById('overlay-image').setAttribute('src', url);
+  document.getElementById('overlay-wrapper').classList.add('overlay-visible');
+}
+window.addEventListener('message', _handleMsg, false);
+
+function _handleMsg(e) {
+  if (e.data.method === 'oc-show-overlay-image') {
+    showOverlay(e.data.url);
+  }
+  if (e.data.method === 'oc-escape-pressed') {
+    hideOverlay();
+  }
+}
+</script>
+
+
+
+
+</body></html>

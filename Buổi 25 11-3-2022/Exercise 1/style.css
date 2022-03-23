@@ -1,0 +1,50 @@
+body {
+  font-family: Tahoma;
+  font-size: 24px;
+}
+
+#container {
+  max-width: 750px;
+  margin: auto;
+}
+
+#container nav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 0;
+}
+
+#container nav li {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #f3EADA;
+  line-height: 50px;
+  text-align: center;
+  border: 2px solid #4E8075;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+#container nav li:hover {
+  background-color: #4E8075;
+  color: #f3EADA;
+}
+
+#container nav li:hover a {
+  color: #f3EADA;
+}
+
+#container nav li a {
+  color: #4E8075;
+  text-decoration: none;
+}
+
+#container main h1 {
+  color: #4E8075;
+}
+/*# sourceMappingURL=style.css.map */

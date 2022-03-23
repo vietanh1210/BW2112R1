@@ -1,0 +1,49 @@
+$font-family: Tahoma;
+$fontsize: 24px;
+$primary_light: #f3EADA;
+$primary_dark: #4E8075;
+$nav-height: 50px;
+$container_width: 750px;
+
+body{
+    font-family: $font-family;
+    font-size: $fontsize;
+}
+#container{
+    max-width: $container_width;
+    margin: auto;
+    nav{
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+        }
+        li{
+            flex-grow: 1;
+            background-color: $primary_light;
+            line-height: $nav-height;
+            text-align: center;
+            border: 2px solid $primary_dark;
+            transition: 2s;
+        }
+        li:hover{
+            background-color: $primary_dark;
+            color: $primary_light;
+        }
+        li:hover a{
+            color: $primary_light;
+
+        }
+            li a{
+                color: $primary_dark;
+                text-decoration: none;
+            
+                }
+        }
+    main{
+        h1{
+            color: $primary_dark;
+        }
+    }
+}

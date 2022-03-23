@@ -1,0 +1,53 @@
+(function( $ ){
+
+	//set equal height for element
+	$.fn.suploResize = function() {
+		var maxHeight = 0;
+		$(this).each(function(){
+			if(maxHeight < $(this).height()){
+				maxHeight = $(this).height();
+			}
+		})
+		$(this).height(maxHeight);
+	};
+
+	// Countdown Timber - Copyright www.w3schools.com
+	// Set the date we're counting down to
+	//<div class="countdown-example" data-date="Jan 5, 2018 15:37:25"></div>
+	//$('.countdown-example').countdown(callback);
+
+	$.fn.countdown = function(callback) {
+		var countDownDate = new Date($(this).data('date')).getTime();
+		var _this = $(this);
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+			// Get todays date and time
+			var now = new Date().getTime();
+
+			// Find the distance between now an the count down date
+			var distance = countDownDate - now;
+
+			// Time calculations for days, hours, minutes and seconds
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+			//console.log(seconds);
+			// Display the result in the element
+			_this.html('<li><span class="title-countdown">Kết thúc sau: </span></li><li><span class="days timenumbers">'+days+'</span><p class="timeRefDays timedescription">Ngày</p></li><li><span class="hours timenumbers">'+hours+'</span><p class="timeRefHours timedescription">Giờ</p></li><li><span class="minutes timenumbers">'+minutes+'</span><p class="timeRefMinutes timedescription">Phút</p></li><li><span class="seconds timenumbers yellow-text">'+seconds+'</span><p class="timeRefSeconds timedescription">Giây</p></li>');
+
+			
+		}, 1000);
+	};
+})( jQuery );
+//load ngay khi trang sẵn sàng
+$(document).ready(function(){
+	
+	//countdown
+	$('.countdown').countdown(cdCallBack);
+	function cdCallBack(){
+		//Code chạy sau khi time out
+		alert('Đã hết hạn!');
+	}
+	
+})

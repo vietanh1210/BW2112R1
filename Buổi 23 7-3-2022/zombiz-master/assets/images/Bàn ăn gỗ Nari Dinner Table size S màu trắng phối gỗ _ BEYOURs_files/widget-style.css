@@ -1,0 +1,148 @@
+@charset "UTF-8";
+.oc-widget {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 80px;
+  height: 80px;
+  z-index: 2147483648 !important;
+}
+.oc-widget.oc-cl{
+  width: 0;
+  height: 0;
+}
+.oc-widget.oc-widget-show {
+  width: 430px;
+  height: 680px;
+}
+.oc-widget.oc-widget-show.size-small { width: 370px; height: 610px; }
+
+.oc-widget-notif-new-message { width: 360px !important; max-height: 680px; }
+.oc-widget.hidden-widget {
+  display: none !important;
+}
+.oc-radial-background {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  bottom: 0px;
+  right: 0px;
+  content: '';
+  pointer-events: none;
+  background: radial-gradient(circle at right bottom, rgba(29, 39, 54, 0.16) 0%,rgba(29, 39, 54, 0) 72%);
+  transition: 150ms;
+}
+
+#oc-modal-frame {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+@media screen and (max-width: 450px) {
+  .oc-widget.oc-widget-show {
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+  }
+
+  .oc-widget.oc-widget-notif {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+  }
+  .oc-widget-notif-new-message {
+    width: calc(100% - 16px) !important;
+  }
+}
+
+.oc-widget > iframe {
+  border: 0px;
+}
+
+.oc-widget .widget-iframe {
+  height: 100% !important;
+  width: 100% !important;
+  position: relative;
+}
+
+.oc-visual-selection-wrapper {
+  width: 800px;
+  height: 100px;
+  position: fixed;
+  top: calc(100% - 100px);
+  left: calc(50% - 300px);
+  z-index: 2147483649 !important;
+}
+
+.oc-visual-selection-highlight {
+  box-shadow: 0px 0px 0px 4000px rgba(0, 0, 0, 0.15);
+  z-index: 2147483647;
+  position: fixed;
+  box-sizing: border-box;
+  overflow: visible;
+  pointer-events: none;
+  border: 1px solid #02b875;
+  transition: all 200ms ease;
+}
+
+.oc-visual-selection-pinpoint svg {
+  fill: transparent;
+  overflow: visible;
+}
+
+.oc-visual-selection-pinpoint rect {
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+}
+
+.oc-visual-selection-pinpoint rect.animate {
+  stroke-dasharray: 5px;
+  stroke-dashoffset: 0;
+  animation-name: lock-marching-ants;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+
+@keyframes lock-marching-ants {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: 100px;
+  }
+}
+
+.oc-visual-selection-pinpoint {
+  box-shadow: 0px 0px 0px 4000px rgba(0, 0, 0, 0.15);
+  z-index: 2147483647;
+  position: fixed;
+  box-sizing: border-box;
+  overflow: visible;
+  pointer-events: none;
+  transition: all 100ms ease;
+}
+
+.oc-widget > .oc-widget-btn {
+  width: 60px;
+  height: 72px;
+}
+
+.oc-widget-resize{
+  transition: width 0.3s ease-in-out 0s;
+  width: 710px !important;
+}
+
+@media screen and (max-width: 710px) {
+  .oc-widget-resize{
+    width: 100% !important;
+  }
+}
+

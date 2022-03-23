@@ -1,0 +1,17 @@
+.main-post img {
+  height: 20%;
+}
+
+.main-post p {
+  color: white;
+}
+
+.related-post img {
+  height: 100px;
+}
+
+.related-post p {
+  display: inline;
+  color: aliceblue;
+}
+/*# sourceMappingURL=style.css.map */
